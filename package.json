@@ -11,8 +11,11 @@
     }
   },
   "lint-staged": {
-    "*.ts": ["eslint --fix", "git add ."]
-
+    "*.ts": [
+      "eslint --fix",
+      "yarn test",
+      "git add ."
+    ]
   },
   "scripts": {
     "dev:run": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/server.ts"
