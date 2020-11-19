@@ -9,9 +9,13 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
   "plugins": [
@@ -19,15 +23,7 @@
     "prettier"
   ],
   "rules": {
-    "camelcase": "off",
     "prettier/prettier": "error",
-    "class-methods-use-this": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "_"
-      }
-    ],
     "import/extensions": [
       "error",
       "ignorePackages",
